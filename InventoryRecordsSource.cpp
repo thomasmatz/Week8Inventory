@@ -135,7 +135,7 @@ void Display_File(fstream& fileObjectPar)
 	fileObjectPar.read(reinterpret_cast<char*>(&item), sizeof(item));
 	while (!fileObjectPar.eof())
 	{
-		cout << "\nRecord Number: " << positionInFile+1;
+		cout << "\nRecord Number: " << positionInFile;
 		cout << "\n   Item Number: " << item.number;
 		cout << "\n   Item Name: " << item.name;
 		cout << "\n   Item Price: $ " << item.price;
