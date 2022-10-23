@@ -29,6 +29,7 @@ struct Product_S
 	int quantity;
 };
 
+const int ONE = 0;
 int main()
 {
 	int choice = 0;
@@ -130,7 +131,7 @@ void Display_File(fstream& fileObjectPar)
 
 	//tellg function gives the position in bytes of the read operation
 	//the size of Product_S is 64 bytes in this program
-	positionInFile = (fileObjectPar.tellg() / sizeof(item));
+	positionInFile = (fileObjectPar.tellg() / sizeof(item)) + ONE;
 	//read in the record (structure) from the binary file
 	fileObjectPar.read(reinterpret_cast<char*>(&item), sizeof(item));
 	while (!fileObjectPar.eof())
