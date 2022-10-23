@@ -29,7 +29,7 @@ struct Product_S
 	int quantity;
 };
 
-const int ONE = 0;
+const int ONE = 1;
 int main()
 {
 	int choice = 0;
